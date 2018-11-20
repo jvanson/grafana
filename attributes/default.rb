@@ -40,7 +40,6 @@ when 'rhel', 'fedora', 'amazon'
       '$releasever'
     end
   default['grafana']['package']['repo'] = "https://packagecloud.io/grafana/stable/el/#{release_version}/$basearch"
-  # default['grafana']['package']['repo'] = 'https://packagecloud.io/grafana/stable/el/$releasever/$basearch'
   default['grafana']['package']['key'] = 'https://packagecloud.io/gpg.key https://grafanarel.s3.amazonaws.com/RPM-GPG-KEY-grafana'
   default['grafana']['package']['version'] = "#{node['grafana']['version']}-1"
   default['grafana']['package']['checkkey'] = true
